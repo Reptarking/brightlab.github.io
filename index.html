@@ -4,7 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Brightlab - Agencia Digital Integral</title>
+  <meta name="description" content="Brightlab es una agencia digital integral que combina datos, creatividad y tecnología para transformar marcas. Servicios: Growth Marketing, UX, Investigación, IA, CRM y más.">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3416/3416074.png" type="image/png" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <style>
     body {
       margin: 0;
@@ -20,6 +23,8 @@
       text-align: center;
       padding: 2em;
       overflow-x: hidden;
+      justify-content: center;
+      min-height: 100vh;
     }
 
     @keyframes gradientBG {
@@ -28,19 +33,31 @@
       100% { background-position: 0% 50%; }
     }
 
-    .loader {
-      border: 6px solid #444;
-      border-top: 6px solid #4D61F4;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      animation: spin 1s linear infinite;
-      margin: 2em 0;
+    .loader-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #15182D;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      opacity: 1;
+      transition: opacity 0.8s ease;
     }
 
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+    .loader-container.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .loader-text {
+      color: #D7FF7B;
+      font-size: 1.2rem;
+      margin-top: 1.5em;
     }
 
     h1 {
@@ -66,9 +83,6 @@
       font-size: 1.6rem;
       font-weight: 600;
       margin-bottom: 1em;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
       color: #CFB6FF;
     }
 
@@ -85,16 +99,10 @@
       border: 1px solid #374151;
       padding: 1em;
       border-radius: 12px;
-      transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
       cursor: pointer;
       opacity: 0;
       transform: translateY(20px);
-    }
-
-    .servicios div:hover {
-      transform: scale(1.05);
-      background: #374151;
-      box-shadow: 0 6px 15px rgba(207, 182, 255, 0.4);
+      animation: fadeInUp 0.8s ease forwards;
     }
 
     .contacto {
@@ -116,7 +124,7 @@
     }
 
     .social a {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       color: #4D61F4;
       transition: transform 0.3s;
     }
@@ -134,49 +142,140 @@
       height: 100%;
       z-index: -1;
     }
+
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .fade-in-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    #contactBtn {
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 0 rgba(77,97,244,0.4); }
+      50% { transform: scale(1.08); box-shadow: 0 0 10px rgba(77,97,244,0.8); }
+    }
+
+    #formModal {
+      visibility: hidden;
+      opacity: 0;
+      transform: scale(0.95);
+      transition: all 0.3s ease;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.7);
+      z-index: 9998;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #formModal.show {
+      visibility: visible;
+      opacity: 1;
+      transform: scale(1);
+    }
   </style>
 </head>
 <body>
   <canvas class="particles"></canvas>
 
-  <div class="loader"></div>
-  <h1>Brightlab</h1>
-  <p>Estamos preparando algo brillante. Somos una agencia digital que combina datos, creatividad y tecnología para transformar marcas.</p>
+  <div class="loader-container" id="loaderContainer">
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <div style="display: flex; gap: 1.2em;">
+        <i class="fas fa-cog fa-spin" style="font-size: 48px; color: #D7FF7B;"></i>
+        <i class="fas fa-cog fa-spin" style="font-size: 60px; color: #CFB6FF;"></i>
+        <i class="fas fa-cog fa-spin" style="font-size: 48px; color: #4D61F4;"></i>
+      </div>
+      <p class="loader-text">Construyendo Brightlab...</p>
+    </div>
+  </div>
+
+  <h1 class="fade-in-up" id="mainTitle">Brightlab</h1>
+  <p class="fade-in-up" id="mainSubtitle">Estamos preparando algo brillante. Somos una agencia digital que combina datos, creatividad y tecnología para transformar marcas.</p>
+  <p class="fade-in-up" id="mainSlogan" style="font-style: italic; color: #bbb;">Datos. Diseño. Impacto real.</p>
 
   <section>
     <h2>¿En qué podemos ayudarte?</h2>
     <div class="servicios">
-      <div>🚀 Growth & Ads Digitales</div>
-      <div>📊 Business Intelligence & Dashboards</div>
-      <div>🎨 UX, CX y Diseño Web</div>
-      <div>🧪 Investigación de Mercado</div>
-      <div>🗞️ Relaciones Públicas</div>
-      <div>🤖 Inteligencia Artificial & APIs</div>
-      <div>📬 Automatización y CRM</div>
-      <div>💻 Desarrollo Web & Apps</div>
-      <div>📝 Marketing de Contenidos</div>
+      <div style="--i:0"><i class="fa-solid fa-rocket"></i> Growth & Ads Digitales</div>
+      <div style="--i:1"><i class="fa-solid fa-chart-line"></i> Business Intelligence</div>
+      <div style="--i:2"><i class="fa-solid fa-palette"></i> UX, CX y Diseño Web</div>
+      <div style="--i:3"><i class="fa-solid fa-flask"></i> Investigación de Mercado</div>
+      <div style="--i:4"><i class="fa-solid fa-newspaper"></i> Relaciones Públicas</div>
+      <div style="--i:5"><i class="fa-solid fa-robot"></i> Inteligencia Artificial & APIs</div>
+      <div style="--i:6"><i class="fa-solid fa-gears"></i> Automatización y CRM</div>
+      <div style="--i:7"><i class="fa-solid fa-code"></i> Desarrollo Web & Apps</div>
+      <div style="--i:8"><i class="fa-solid fa-pen-nib"></i> Marketing de Contenidos</div>
     </div>
   </section>
 
   <div class="social">
-    <a href="https://facebook.com/brightlab.pe" target="_blank">📘</a>
-    <a href="https://instagram.com/brightlab.pe" target="_blank">📸</a>
-    <a href="https://youtube.com/@brightlab" target="_blank">▶️</a>
+    <a href="https://facebook.com/brightlab.pe" target="_blank"><i class="fab fa-facebook-square"></i></a>
+    <a href="https://instagram.com/brightlab.pe" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://youtube.com/@brightlab" target="_blank"><i class="fab fa-youtube"></i></a>
   </div>
 
   <div class="contacto">
     ¿Tienes preguntas? Escríbenos a <a href="mailto:hola@brightlab.pe">hola@brightlab.pe</a>
   </div>
 
+  <button id="contactBtn" aria-label="Abrir formulario de contacto" style="position: fixed; bottom: 30px; right: 30px; background: #4D61F4; color: white; border: none; border-radius: 50%; width: 60px; height: 60px; font-size: 24px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); cursor: pointer; z-index: 9999;">
+    💬
+  </button>
+
+  <div id="formModal" aria-label="Formulario de contacto" role="dialog">
+    <div style="background: #1f2937; padding: 2em; border-radius: 12px; width: 90%; max-width: 400px; color: white; position: relative;">
+      <button onclick="cerrarModal()" style="position: absolute; top: 10px; right: 10px; background: none; border: none; color: #fff; font-size: 1.2em; cursor: pointer;">&times;</button>
+      <h2 style="margin-top: 0; color: #D7FF7B;">Contáctanos</h2>
+      <form action="https://formspree.io/f/xqaplrvd" method="POST">
+        <label for="email">Tu correo:</label><br>
+        <input type="email" name="email" required style="width: 100%; padding: 0.5em; margin-bottom: 1em; border-radius: 6px; border: none;"><br>
+        <label for="message">Tu mensaje:</label><br>
+        <textarea name="message" rows="4" required style="width: 100%; padding: 0.5em; border-radius: 6px; border: none;"></textarea><br>
+        <button type="submit" style="margin-top: 1em; background: #4D61F4; color: white; border: none; padding: 0.6em 1.2em; border-radius: 8px; cursor: pointer;">Enviar</button>
+      </form>
+    </div>
+  </div>
+
   <script>
-    const items = document.querySelectorAll(".servicios div");
-    items.forEach((item, index) => {
+    window.onload = () => {
       setTimeout(() => {
-        item.style.transition = "all 0.6s ease";
-        item.style.opacity = 1;
-        item.style.transform = "translateY(0)";
-      }, 150 * index);
-    });
+        const loader = document.getElementById("loaderContainer");
+        loader.classList.add("hidden");
+        setTimeout(() => {
+          loader.style.display = "none";
+          document.getElementById("mainTitle").classList.add("visible");
+          document.getElementById("mainSubtitle").classList.add("visible");
+          document.getElementById("mainSlogan").classList.add("visible");
+        }, 800);
+      }, 2000);
+    };
+
+    document.getElementById("contactBtn").onclick = function () {
+      document.getElementById("formModal").classList.add("show");
+    };
+
+    function cerrarModal() {
+      document.getElementById("formModal").classList.remove("show");
+    }
 
     const canvas = document.querySelector(".particles");
     const ctx = canvas.getContext("2d");
@@ -207,10 +306,8 @@
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
         ctx.fillStyle = "rgba(207,182,255,0.08)";
         ctx.fill();
-
         p.x += p.dx;
         p.y += p.dy;
-
         if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
         if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
       });
