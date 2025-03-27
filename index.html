@@ -4,24 +4,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Brightlab - Agencia Digital Integral</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #111827, #1f2937);
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(-45deg, #15182D, #2D2B5A, #4D61F4, #2D2B5A);
+      background-size: 400% 400%;
+      animation: gradientBG 25s ease infinite;
       color: #fff;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
       padding: 2em;
+      overflow-x: hidden;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     .loader {
       border: 6px solid #444;
-      border-top: 6px solid #60a5fa;
+      border-top: 6px solid #4D61F4;
       border-radius: 50%;
       width: 50px;
       height: 50px;
@@ -37,6 +46,7 @@
     h1 {
       font-size: 3rem;
       margin: 0.5em 0 0.2em;
+      color: #D7FF7B;
     }
 
     p {
@@ -59,6 +69,7 @@
       max-width: 700px;
       margin-left: auto;
       margin-right: auto;
+      color: #CFB6FF;
     }
 
     .servicios {
@@ -70,7 +81,7 @@
     }
 
     .servicios div {
-      background: #1f2937;
+      background: rgba(31, 41, 55, 0.85);
       border: 1px solid #374151;
       padding: 1em;
       border-radius: 12px;
@@ -83,7 +94,7 @@
     .servicios div:hover {
       transform: scale(1.05);
       background: #374151;
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 6px 15px rgba(207, 182, 255, 0.4);
     }
 
     .contacto {
@@ -93,12 +104,40 @@
     }
 
     a {
-      color: #60a5fa;
+      color: #4D61F4;
       text-decoration: none;
+    }
+
+    .social {
+      display: flex;
+      gap: 1.5em;
+      justify-content: center;
+      margin-top: 2em;
+    }
+
+    .social a {
+      font-size: 1.5rem;
+      color: #4D61F4;
+      transition: transform 0.3s;
+    }
+
+    .social a:hover {
+      transform: scale(1.2);
+      color: #D7FF7B;
+    }
+
+    .particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
     }
   </style>
 </head>
 <body>
+  <canvas class="particles"></canvas>
 
   <div class="loader"></div>
   <h1>Brightlab</h1>
@@ -106,12 +145,12 @@
 
   <section>
     <h2>¿En qué podemos ayudarte?</h2>
-
     <div class="servicios">
       <div>🚀 Growth & Ads Digitales</div>
       <div>📊 Business Intelligence & Dashboards</div>
       <div>🎨 UX, CX y Diseño Web</div>
       <div>🧪 Investigación de Mercado</div>
+      <div>🗞️ Relaciones Públicas</div>
       <div>🤖 Inteligencia Artificial & APIs</div>
       <div>📬 Automatización y CRM</div>
       <div>💻 Desarrollo Web & Apps</div>
@@ -119,12 +158,17 @@
     </div>
   </section>
 
+  <div class="social">
+    <a href="https://facebook.com/brightlab.pe" target="_blank">📘</a>
+    <a href="https://instagram.com/brightlab.pe" target="_blank">📸</a>
+    <a href="https://youtube.com/@brightlab" target="_blank">▶️</a>
+  </div>
+
   <div class="contacto">
     ¿Tienes preguntas? Escríbenos a <a href="mailto:hola@brightlab.pe">hola@brightlab.pe</a>
   </div>
 
   <script>
-    // Animación de aparición secuencial para los servicios
     const items = document.querySelectorAll(".servicios div");
     items.forEach((item, index) => {
       setTimeout(() => {
@@ -133,7 +177,53 @@
         item.style.transform = "translateY(0)";
       }, 150 * index);
     });
-  </script>
 
+    const canvas = document.querySelector(".particles");
+    const ctx = canvas.getContext("2d");
+    let particles = [];
+
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    function createParticles() {
+      particles = [];
+      for (let i = 0; i < 60; i++) {
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          radius: Math.random() * 2 + 1,
+          dx: (Math.random() - 0.5) * 0.5,
+          dy: (Math.random() - 0.5) * 0.5
+        });
+      }
+    }
+
+    function drawParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.fillStyle = "rgba(207,182,255,0.08)";
+        ctx.fill();
+
+        p.x += p.dx;
+        p.y += p.dy;
+
+        if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+      });
+      requestAnimationFrame(drawParticles);
+    }
+
+    resize();
+    createParticles();
+    drawParticles();
+    window.addEventListener("resize", () => {
+      resize();
+      createParticles();
+    });
+  </script>
 </body>
 </html>
