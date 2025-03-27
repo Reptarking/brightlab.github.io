@@ -1,11 +1,139 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Brightlab</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Brightlab - Agencia Digital Integral</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #111827, #1f2937);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 2em;
+    }
+
+    .loader {
+      border: 6px solid #444;
+      border-top: 6px solid #60a5fa;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+      margin: 2em 0;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 0.5em 0 0.2em;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 1.5em;
+      line-height: 1.6;
+    }
+
+    section {
+      margin-top: 3em;
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 1em;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .servicios {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.2em;
+      justify-content: center;
+      margin-top: 2em;
+    }
+
+    .servicios div {
+      background: #1f2937;
+      border: 1px solid #374151;
+      padding: 1em;
+      border-radius: 12px;
+      transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .servicios div:hover {
+      transform: scale(1.05);
+      background: #374151;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    .contacto {
+      font-size: 0.9rem;
+      opacity: 0.7;
+      margin-top: 4em;
+    }
+
+    a {
+      color: #60a5fa;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-  <h1>Brightlab está en construcción</h1>
-  <p>Muy pronto estaremos en línea.</p>
+
+  <div class="loader"></div>
+  <h1>Brightlab</h1>
+  <p>Estamos preparando algo brillante. Somos una agencia digital que combina datos, creatividad y tecnología para transformar marcas.</p>
+
+  <section>
+    <h2>¿En qué podemos ayudarte?</h2>
+
+    <div class="servicios">
+      <div>🚀 Growth & Ads Digitales</div>
+      <div>📊 Business Intelligence & Dashboards</div>
+      <div>🎨 UX, CX y Diseño Web</div>
+      <div>🧪 Investigación de Mercado</div>
+      <div>🤖 Inteligencia Artificial & APIs</div>
+      <div>📬 Automatización y CRM</div>
+      <div>💻 Desarrollo Web & Apps</div>
+      <div>📝 Marketing de Contenidos</div>
+    </div>
+  </section>
+
+  <div class="contacto">
+    ¿Tienes preguntas? Escríbenos a <a href="mailto:hola@brightlab.pe">hola@brightlab.pe</a>
+  </div>
+
+  <script>
+    // Animación de aparición secuencial para los servicios
+    const items = document.querySelectorAll(".servicios div");
+    items.forEach((item, index) => {
+      setTimeout(() => {
+        item.style.transition = "all 0.6s ease";
+        item.style.opacity = 1;
+        item.style.transform = "translateY(0)";
+      }, 150 * index);
+    });
+  </script>
+
 </body>
 </html>
