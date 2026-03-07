@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Brightlab - Agencia Digital Integral</title>
-  <meta name="description" content="Brightlab es una agencia digital integral que combina datos, creatividad y tecnología para transformar marcas. Servicios: Growth Marketing, UX, Investigación, IA, CRM y más.">
+  <title>Brightlab | Agencia Digital Integral</title>
+  <meta name="description" content="Brightlab es una agencia digital integral: investigación de mercado, marketing digital, UX/CX, IA, CRM, PR, contenidos y desarrollo web para escalar marcas con estrategia y datos.">
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -13,71 +13,190 @@
   })(window,document,'script','dataLayer','GTM-P9RSK8GW');</script>
   <!-- End Google Tag Manager -->
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3416/3416074.png" type="image/png" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P9RSK8GW"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P9RSK8GW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  <canvas class="particles"></canvas>
 
-  <div class="loader-container" id="loaderContainer">
-    <div style="display: flex; flex-direction: column; align-items: center;">
-      <div style="display: flex; gap: 1.2em;">
-        <i class="fas fa-cog fa-spin" style="font-size: 48px; color: #D7FF7B;"></i>
-        <i class="fas fa-cog fa-spin" style="font-size: 60px; color: #CFB6FF;"></i>
-        <i class="fas fa-cog fa-spin" style="font-size: 48px; color: #4D61F4;"></i>
+  <canvas class="particles" aria-hidden="true"></canvas>
+
+  <div class="loader-container" id="loaderContainer" aria-live="polite">
+    <div class="loader-content">
+      <div class="loader-gears" aria-hidden="true">
+        <i class="fas fa-cog fa-spin"></i>
+        <i class="fas fa-cog fa-spin"></i>
+        <i class="fas fa-cog fa-spin"></i>
       </div>
-      <p class="loader-text">Construyendo Brightlab...</p>
+      <p class="loader-text">Activando tu equipo digital de crecimiento...</p>
     </div>
   </div>
 
-  <h1 class="fade-in-up" id="mainTitle">Brightlab</h1>
-  <p class="fade-in-up" id="mainSubtitle">Estamos preparando algo brillante. Somos una agencia digital que combina datos, creatividad y tecnología para transformar marcas.</p>
-  <p class="fade-in-up" id="mainSlogan" style="font-style: italic; color: #bbb;">Datos. Diseño. Impacto real.</p>
-
-  <section>
-    <h2>¿En qué podemos ayudarte?</h2>
-    <div class="servicios">
-      <div style="--i:0"><i class="fa-solid fa-rocket"></i> Growth & Ads Digitales</div>
-      <div style="--i:1"><i class="fa-solid fa-chart-line"></i> Business Intelligence</div>
-      <div style="--i:2"><i class="fa-solid fa-palette"></i> UX, CX y Diseño Web</div>
-      <div style="--i:3"><i class="fa-solid fa-flask"></i> Investigación de Mercado</div>
-      <div style="--i:4"><i class="fa-solid fa-newspaper"></i> Relaciones Públicas</div>
-      <div style="--i:5"><i class="fa-solid fa-robot"></i> Inteligencia Artificial & APIs</div>
-      <div style="--i:6"><i class="fa-solid fa-gears"></i> Automatización y CRM</div>
-      <div style="--i:7"><i class="fa-solid fa-code"></i> Desarrollo Web & Apps</div>
-      <div style="--i:8"><i class="fa-solid fa-pen-nib"></i> Marketing de Contenidos</div>
+  <header class="hero fade-in-up" id="mainHero">
+    <span class="eyebrow">Agencia digital integral</span>
+    <h1>Brightlab</h1>
+    <p class="hero-subtitle">Convertimos ideas en resultados medibles combinando estrategia, creatividad y tecnología.</p>
+    <p class="hero-slogan">Datos. Diseño. Impacto real.</p>
+    <div class="hero-cta">
+      <a class="btn-primary" href="#servicios">Ver servicios</a>
+      <button class="btn-secondary" id="contactBtn" aria-label="Abrir formulario de contacto">Hablemos</button>
     </div>
-  </section>
+  </header>
 
-  <div class="social">
-    <a href="https://facebook.com/brightlab.pe" target="_blank"><i class="fab fa-facebook-square"></i></a>
-    <a href="https://instagram.com/brightlab.pe" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://youtube.com/@brightlab" target="_blank"><i class="fab fa-youtube"></i></a>
-  </div>
+  <main>
+    <section class="stats fade-in-up" aria-label="Indicadores de valor">
+      <article><strong>+40</strong><span>proyectos multidisciplinares</span></article>
+      <article><strong>+12</strong><span>industrias acompañadas</span></article>
+      <article><strong>360°</strong><span>estrategia digital conectada</span></article>
+      <article><strong>ROI</strong><span>orientación a resultados de negocio</span></article>
+    </section>
 
-  <div class="contacto">
-    ¿Tienes preguntas? Escríbenos a <a href="mailto:hola@brightlab.pe">hola@brightlab.pe</a>
-  </div>
+    <section id="servicios" class="services-section fade-in-up">
+      <div class="section-heading">
+        <h2>Servicios habilitados de extremo a extremo</h2>
+        <p>Selecciona una pestaña para ver alcance, entregables y resultados esperados de cada línea de servicio.</p>
+      </div>
 
-  <button id="contactBtn" aria-label="Abrir formulario de contacto" style="position: fixed; bottom: 30px; right: 30px; background: #4D61F4; color: white; border: none; border-radius: 50%; width: 60px; height: 60px; font-size: 24px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); cursor: pointer; z-index: 9999;">
-    💬
-  </button>
+      <div class="tabs" role="tablist" aria-label="Pestañas de servicios Brightlab">
+        <button role="tab" aria-selected="true" aria-controls="tab-growth" id="btn-growth" class="tab-btn active" data-tab="growth"><i class="fa-solid fa-rocket"></i> Growth & Ads</button>
+        <button role="tab" aria-selected="false" aria-controls="tab-bi" id="btn-bi" class="tab-btn" data-tab="bi"><i class="fa-solid fa-chart-line"></i> Business Intelligence</button>
+        <button role="tab" aria-selected="false" aria-controls="tab-ux" id="btn-ux" class="tab-btn" data-tab="ux"><i class="fa-solid fa-palette"></i> UX, CX y Diseño</button>
+        <button role="tab" aria-selected="false" aria-controls="tab-research" id="btn-research" class="tab-btn" data-tab="research"><i class="fa-solid fa-flask"></i> Market Research</button>
+        <button role="tab" aria-selected="false" aria-controls="tab-pr" id="btn-pr" class="tab-btn" data-tab="pr"><i class="fa-solid fa-newspaper"></i> Relaciones Públicas</button>
+        <button role="tab" aria-selected="false" aria-controls="tab-ai" id="btn-ai" class="tab-btn" data-tab="ai"><i class="fa-solid fa-robot"></i> IA & APIs</button>
+        <button role="tab" aria-selected="false" aria-controls="tab-crm" id="btn-crm" class="tab-btn" data-tab="crm"><i class="fa-solid fa-gears"></i> Automatización & CRM</button>
+        <button role="tab" aria-selected="false" aria-controls="tab-dev" id="btn-dev" class="tab-btn" data-tab="dev"><i class="fa-solid fa-code"></i> Desarrollo Web & Apps</button>
+        <button role="tab" aria-selected="false" aria-controls="tab-content" id="btn-content" class="tab-btn" data-tab="content"><i class="fa-solid fa-pen-nib"></i> Contenido & SEO</button>
+      </div>
 
-  <div id="formModal" aria-label="Formulario de contacto" role="dialog">
-    <div style="background: #1f2937; padding: 2em; border-radius: 12px; width: 90%; max-width: 400px; color: white; position: relative;">
-      <button onclick="cerrarModal()" style="position: absolute; top: 10px; right: 10px; background: none; border: none; color: #fff; font-size: 1.2em; cursor: pointer;">&times;</button>
-      <h2 style="margin-top: 0; color: #D7FF7B;">Contáctanos</h2>
+      <div class="tab-panels">
+        <article class="tab-panel active" role="tabpanel" id="tab-growth" aria-labelledby="btn-growth">
+          <h3>Growth Marketing & Ads Digitales</h3>
+          <p>Diseñamos embudos completos (awareness, consideración y conversión) con campañas en Google, Meta, TikTok y LinkedIn, alineadas al LTV y CAC objetivo.</p>
+          <ul>
+            <li>Diagnóstico de audiencias y propuesta de valor por segmento.</li>
+            <li>Arquitectura de campañas, creatividades y testing A/B continuo.</li>
+            <li>Dashboards semanales con métricas de rendimiento y recomendaciones.</li>
+          </ul>
+          <p class="panel-result"><strong>Resultado esperado:</strong> mayor volumen de leads calificados y reducción progresiva del costo por adquisición.</p>
+        </article>
+
+        <article class="tab-panel" role="tabpanel" id="tab-bi" aria-labelledby="btn-bi">
+          <h3>Business Intelligence</h3>
+          <p>Conectamos tus fuentes de datos para convertir información dispersa en decisiones accionables para dirección comercial, marketing y operaciones.</p>
+          <ul>
+            <li>Implementación de tracking, eventos y taxonomía de datos.</li>
+            <li>Integración de CRM, Ads, Analytics y fuentes internas.</li>
+            <li>Modelos de atribución, cohortes y análisis de rentabilidad.</li>
+          </ul>
+          <p class="panel-result"><strong>Resultado esperado:</strong> visibilidad 360° del negocio y decisiones más rápidas basadas en evidencia.</p>
+        </article>
+
+        <article class="tab-panel" role="tabpanel" id="tab-ux" aria-labelledby="btn-ux">
+          <h3>UX, CX y Diseño Web</h3>
+          <p>Optimizamos la experiencia digital de tus usuarios para elevar conversión, satisfacción y recordación de marca en todos los puntos de contacto.</p>
+          <ul>
+            <li>Mapeo de customer journey y definición de fricciones clave.</li>
+            <li>Prototipos de alta fidelidad orientados a objetivos de negocio.</li>
+            <li>Sistemas de diseño escalables y accesibles.</li>
+          </ul>
+          <p class="panel-result"><strong>Resultado esperado:</strong> flujos más intuitivos, menor abandono y mayor tasa de conversión.</p>
+        </article>
+
+        <article class="tab-panel" role="tabpanel" id="tab-research" aria-labelledby="btn-research">
+          <h3>Market Research</h3>
+          <p>Realizamos investigación cualitativa y cuantitativa para descubrir oportunidades reales de producto, posicionamiento y expansión comercial.</p>
+          <ul>
+            <li>Entrevistas en profundidad, focus groups y social listening.</li>
+            <li>Encuestas, análisis competitivo y sizing de mercado.</li>
+            <li>Segmentación de buyer personas y validación de hipótesis.</li>
+          </ul>
+          <p class="panel-result"><strong>Resultado esperado:</strong> estrategia comercial respaldada por insights del mercado y del cliente.</p>
+        </article>
+
+        <article class="tab-panel" role="tabpanel" id="tab-pr" aria-labelledby="btn-pr">
+          <h3>Relaciones Públicas Digitales</h3>
+          <p>Fortalecemos reputación y autoridad de marca mediante narrativa estratégica, relacionamiento con medios y gestión de crisis.</p>
+          <ul>
+            <li>Plan de vocería, messaging framework y media training.</li>
+            <li>Notas de prensa, difusión segmentada y alianzas editoriales.</li>
+            <li>Protocolo de respuesta ante incidencias reputacionales.</li>
+          </ul>
+          <p class="panel-result"><strong>Resultado esperado:</strong> mayor visibilidad positiva, credibilidad y protección reputacional.</p>
+        </article>
+
+        <article class="tab-panel" role="tabpanel" id="tab-ai" aria-labelledby="btn-ai">
+          <h3>Inteligencia Artificial & APIs</h3>
+          <p>Implementamos soluciones de IA aplicadas al negocio para acelerar procesos, mejorar atención y crear ventajas competitivas sostenibles.</p>
+          <ul>
+            <li>Asistentes conversacionales para ventas y soporte.</li>
+            <li>Automatización de análisis documental y generación de contenido.</li>
+            <li>Integraciones API entre herramientas internas y plataformas externas.</li>
+          </ul>
+          <p class="panel-result"><strong>Resultado esperado:</strong> operación más eficiente, tiempos de respuesta menores y mejores experiencias.</p>
+        </article>
+
+        <article class="tab-panel" role="tabpanel" id="tab-crm" aria-labelledby="btn-crm">
+          <h3>Automatización y CRM</h3>
+          <p>Diseñamos procesos comerciales escalables con automatizaciones que acompañan cada etapa del ciclo de vida del cliente.</p>
+          <ul>
+            <li>Configuración de pipelines, lead scoring y lead routing.</li>
+            <li>Secuencias automatizadas de nutrición y seguimiento comercial.</li>
+            <li>Integraciones con WhatsApp, email marketing y sistemas de ventas.</li>
+          </ul>
+          <p class="panel-result"><strong>Resultado esperado:</strong> equipos comerciales más productivos y mayor cierre de oportunidades.</p>
+        </article>
+
+        <article class="tab-panel" role="tabpanel" id="tab-dev" aria-labelledby="btn-dev">
+          <h3>Desarrollo Web & Apps</h3>
+          <p>Construimos productos digitales veloces, seguros y listos para escalar, desde sitios corporativos hasta plataformas transaccionales.</p>
+          <ul>
+            <li>Landing pages de alto rendimiento y sitios institucionales.</li>
+            <li>Apps web progresivas y paneles de administración a medida.</li>
+            <li>Optimización técnica: performance, SEO técnico y seguridad.</li>
+          </ul>
+          <p class="panel-result"><strong>Resultado esperado:</strong> presencia digital robusta con base tecnológica preparada para crecer.</p>
+        </article>
+
+        <article class="tab-panel" role="tabpanel" id="tab-content" aria-labelledby="btn-content">
+          <h3>Marketing de Contenidos & SEO</h3>
+          <p>Creamos ecosistemas de contenido que atraen tráfico cualificado, educan audiencias y convierten interés en oportunidades comerciales.</p>
+          <ul>
+            <li>Estrategia editorial full funnel con calendario trimestral.</li>
+            <li>Optimización SEO on-page, clusters temáticos y enlazado interno.</li>
+            <li>Producción de piezas para blog, redes, email y formatos descargables.</li>
+          </ul>
+          <p class="panel-result"><strong>Resultado esperado:</strong> mayor tráfico orgánico, autoridad de marca y generación de demanda sostenida.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer fade-in-up">
+    <div class="social" aria-label="Redes sociales de Brightlab">
+      <a href="https://facebook.com/brightlab.pe" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-square"></i></a>
+      <a href="https://instagram.com/brightlab.pe" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com/@brightlab" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p>¿Tienes un reto digital? Escríbenos a <a href="mailto:hola@brightlab.pe">hola@brightlab.pe</a></p>
+  </footer>
+
+  <div id="formModal" aria-label="Formulario de contacto" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-card">
+      <button onclick="cerrarModal()" class="close-modal" aria-label="Cerrar formulario">&times;</button>
+      <h2>Contáctanos</h2>
+      <p>Cuéntanos tu objetivo y te responderemos en menos de 24 horas hábiles.</p>
       <form action="https://formspree.io/f/xqaplrvd" method="POST">
-        <label for="email">Tu correo:</label><br>
-        <input type="email" name="email" required style="width: 100%; padding: 0.5em; margin-bottom: 1em; border-radius: 6px; border: none;"><br>
-        <label for="message">Tu mensaje:</label><br>
-        <textarea name="message" rows="4" required style="width: 100%; padding: 0.5em; border-radius: 6px; border: none;"></textarea><br>
-        <button type="submit" style="margin-top: 1em; background: #4D61F4; color: white; border: none; padding: 0.6em 1.2em; border-radius: 8px; cursor: pointer;">Enviar</button>
+        <label for="email">Tu correo</label>
+        <input id="email" type="email" name="email" required>
+        <label for="message">Tu mensaje</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <button type="submit">Enviar</button>
       </form>
     </div>
   </div>
