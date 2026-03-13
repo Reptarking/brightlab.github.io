@@ -94,6 +94,8 @@ h1 {
   font-weight: 700;
   cursor: pointer;
   font-size: 0.95rem;
+  display: inline-block;
+  text-decoration: none;
 }
 
 .btn-primary {
@@ -403,4 +405,25 @@ a {
   .tab-btn {
     font-size: 0.88rem;
   }
+}
+
+.booking-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.booking-card p {
+  margin-top: 0;
+  color: #e7e9f5;
+}
+
+.booking-actions {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
