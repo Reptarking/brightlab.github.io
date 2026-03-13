@@ -1,43 +1,28 @@
 window.addEventListener('load', () => {
-  setTimeout(() => {
-    const loader = document.getElementById('loaderContainer');
-    loader.classList.add('hidden');
-
-    setTimeout(() => {
-      loader.style.display = 'none';
-      document.querySelectorAll('.fade-in-up').forEach((element) => {
-        element.classList.add('visible');
-      });
-    }, 700);
-  }, 1200);
+  document.querySelectorAll('.fade-in-up').forEach((element) => {
+    element.classList.add('visible');
+  });
 });
 
-const contactBtn = document.getElementById('contactBtn');
-const modal = document.getElementById('formModal');
 
-contactBtn.addEventListener('click', () => {
-  modal.classList.add('show');
-  modal.setAttribute('aria-hidden', 'false');
-});
+const bookingBtn = document.getElementById('bookingBtn');
+const backBtn = document.getElementById('backBtn');
+const bookingSection = document.getElementById('bookingSection');
 
-function cerrarModal() {
-  modal.classList.remove('show');
-  modal.setAttribute('aria-hidden', 'true');
+function openBooking() {
+  bookingSection.classList.add('show');
+  bookingSection.setAttribute('aria-hidden', 'false');
 }
 
-window.cerrarModal = cerrarModal;
+function closeBooking() {
+  bookingSection.classList.remove('show');
+  bookingSection.setAttribute('aria-hidden', 'true');
+}
 
-modal.addEventListener('click', (event) => {
-  if (event.target === modal) {
-    cerrarModal();
-  }
-});
-
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape' && modal.classList.contains('show')) {
-    cerrarModal();
-  }
-});
+if (bookingBtn && backBtn && bookingSection) {
+  bookingBtn.addEventListener('click', openBooking);
+  backBtn.addEventListener('click', closeBooking);
+}
 
 const tabs = Array.from(document.querySelectorAll('.tab-btn'));
 const panels = Array.from(document.querySelectorAll('.tab-panel'));
