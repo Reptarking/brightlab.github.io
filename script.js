@@ -1,42 +1,7 @@
 window.addEventListener('load', () => {
-  setTimeout(() => {
-    const loader = document.getElementById('loaderContainer');
-    loader.classList.add('hidden');
-
-    setTimeout(() => {
-      loader.style.display = 'none';
-      document.querySelectorAll('.fade-in-up').forEach((element) => {
-        element.classList.add('visible');
-      });
-    }, 700);
-  }, 1200);
-});
-
-const contactBtn = document.getElementById('contactBtn');
-const modal = document.getElementById('formModal');
-
-contactBtn.addEventListener('click', () => {
-  modal.classList.add('show');
-  modal.setAttribute('aria-hidden', 'false');
-});
-
-function cerrarModal() {
-  modal.classList.remove('show');
-  modal.setAttribute('aria-hidden', 'true');
-}
-
-window.cerrarModal = cerrarModal;
-
-modal.addEventListener('click', (event) => {
-  if (event.target === modal) {
-    cerrarModal();
-  }
-});
-
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape' && modal.classList.contains('show')) {
-    cerrarModal();
-  }
+  document.querySelectorAll('.fade-in-up').forEach((element) => {
+    element.classList.add('visible');
+  });
 });
 
 const tabs = Array.from(document.querySelectorAll('.tab-btn'));
