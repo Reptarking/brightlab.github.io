@@ -50,25 +50,42 @@ main,
   margin-inline: auto;
 }
 
+
 .site-header {
-  padding-top: 1.4rem;
+  padding: 1.1rem 0 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
-.brand-link {
+.brand-lockup {
   display: inline-flex;
-  border-radius: 12px;
-  padding: 0.4rem 0.6rem;
+  align-items: center;
+  padding: 0.35rem 0.7rem;
+  border-radius: 10px;
+  background: rgba(21, 24, 45, 0.45);
 }
 
-.brand-logo {
-  width: clamp(130px, 18vw, 220px);
+.brand-lockup img, .footer-logo, .hero-isotype {
   height: auto;
   display: block;
+}
+
+.header-cta {
+  background: #d7ff7b;
+  color: #15182d;
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
 }
 
 .hero {
   padding: 2.5rem 0 2rem;
   text-align: center;
+  display: grid;
+  justify-items: center;
 }
 
 .eyebrow {
@@ -370,7 +387,7 @@ a {
 .modal-card {
   background: #1b2142;
   width: min(440px, 100%);
-  border-radius: 14px;
+  border-radius: 20px;
   border: 1px solid rgba(215, 255, 123, 0.25);
   padding: 1.4rem;
   position: relative;
@@ -462,7 +479,7 @@ a {
 .booking-card {
   background: var(--card);
   border: 1px solid var(--card-border);
-  border-radius: 18px;
+  border-radius: 20px;
   box-shadow: var(--shadow);
   padding: 1.5rem;
   text-align: center;
@@ -478,4 +495,10 @@ a {
   gap: 0.8rem;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.footer-logo { margin: 0 auto 0.9rem; }
+
+@media (max-width: 640px) {
+  .site-header { flex-direction: column; }
 }
