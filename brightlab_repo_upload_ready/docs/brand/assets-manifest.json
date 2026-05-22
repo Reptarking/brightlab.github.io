@@ -1,0 +1,203 @@
+{
+  "source_pdf": "Manualdemarca.pdf",
+  "dpi_rendered": 600,
+  "colors": {
+    "dark_purple": "#15182D",
+    "white": "#FFFFFF",
+    "light_green": "#D7FF7B",
+    "electric_purple": "#4D61F4",
+    "light_purple": "#CFB6FF",
+    "dark_grey": "#1D1D1B"
+  },
+  "assets": [
+    {
+      "name": "logo_primary_on_dark_purple",
+      "page": 4,
+      "kind": "primary full logo on dark background",
+      "size_px": [
+        4299,
+        1335
+      ]
+    },
+    {
+      "name": "logo_primary_white_lightgreen_transparent",
+      "page": 4,
+      "kind": "primary logo transparent for dark backgrounds",
+      "size_px": [
+        4299,
+        1335
+      ]
+    },
+    {
+      "name": "logo_secondary_dark_purple_white",
+      "page": 5,
+      "kind": "secondary logo on dark purple",
+      "size_px": [
+        2328,
+        735
+      ]
+    },
+    {
+      "name": "logo_secondary_dark_purple_light_purple",
+      "page": 5,
+      "kind": "secondary logo on dark purple",
+      "size_px": [
+        2325,
+        735
+      ]
+    },
+    {
+      "name": "logo_secondary_electric_purple_white",
+      "page": 5,
+      "kind": "secondary logo on electric purple",
+      "size_px": [
+        2328,
+        735
+      ]
+    },
+    {
+      "name": "logo_secondary_light_green_dark_purple",
+      "page": 5,
+      "kind": "secondary logo on light green",
+      "size_px": [
+        2325,
+        735
+      ]
+    },
+    {
+      "name": "logo_secondary_light_purple_dark_purple",
+      "page": 5,
+      "kind": "secondary logo on light purple",
+      "size_px": [
+        2328,
+        735
+      ]
+    },
+    {
+      "name": "logo_transparent_dark_purple",
+      "page": 5,
+      "kind": "transparent logo",
+      "size_px": [
+        2340,
+        747
+      ]
+    },
+    {
+      "name": "logo_transparent_electric_purple",
+      "page": 5,
+      "kind": "transparent logo",
+      "size_px": [
+        2337,
+        747
+      ]
+    },
+    {
+      "name": "logo_grayscale_white_on_black",
+      "page": 5,
+      "kind": "grayscale logo on black",
+      "size_px": [
+        2328,
+        744
+      ]
+    },
+    {
+      "name": "logo_grayscale_black_transparent",
+      "page": 5,
+      "kind": "transparent grayscale logo",
+      "size_px": [
+        2337,
+        744
+      ]
+    },
+    {
+      "name": "isotype_primary_on_dark_purple",
+      "page": 6,
+      "kind": "primary isotype on dark background",
+      "size_px": [
+        1308,
+        1293
+      ]
+    },
+    {
+      "name": "isotype_primary_lightgreen_transparent",
+      "page": 6,
+      "kind": "isotype transparent",
+      "size_px": [
+        1308,
+        1293
+      ]
+    },
+    {
+      "name": "isotype_dark_purple_light_purple_square",
+      "page": 6,
+      "kind": "isotype square",
+      "size_px": [
+        1191,
+        1194
+      ]
+    },
+    {
+      "name": "isotype_light_green_dark_purple_square",
+      "page": 6,
+      "kind": "isotype square",
+      "size_px": [
+        1191,
+        1194
+      ]
+    },
+    {
+      "name": "isotype_electric_purple_white_square",
+      "page": 6,
+      "kind": "isotype square",
+      "size_px": [
+        1191,
+        1194
+      ]
+    },
+    {
+      "name": "isotype_light_purple_dark_purple_square",
+      "page": 6,
+      "kind": "isotype square",
+      "size_px": [
+        1194,
+        1194
+      ]
+    },
+    {
+      "name": "isotype_dark_purple_transparent",
+      "page": 6,
+      "kind": "isotype transparent",
+      "size_px": [
+        1191,
+        1194
+      ]
+    },
+    {
+      "name": "isotype_electric_purple_transparent",
+      "page": 6,
+      "kind": "isotype transparent",
+      "size_px": [
+        1191,
+        1194
+      ]
+    },
+    {
+      "name": "isotype_white_on_black_square",
+      "page": 6,
+      "kind": "isotype square",
+      "size_px": [
+        1191,
+        1194
+      ]
+    },
+    {
+      "name": "isotype_black_transparent",
+      "page": 6,
+      "kind": "isotype transparent",
+      "size_px": [
+        1194,
+        1194
+      ]
+    }
+  ]
+}
