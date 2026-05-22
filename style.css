@@ -50,35 +50,20 @@ main,
   margin-inline: auto;
 }
 
-
 .site-header {
-  padding: 1.1rem 0 0.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  padding-top: 1.4rem;
 }
 
-.brand-lockup {
+.brand-link {
   display: inline-flex;
-  align-items: center;
-  padding: 0.35rem 0.7rem;
-  border-radius: 10px;
-  background: rgba(21, 24, 45, 0.45);
+  border-radius: 12px;
+  padding: 0.4rem 0.6rem;
 }
 
-.brand-lockup img, .footer-logo, .hero-isotype {
+.brand-logo {
+  width: clamp(130px, 18vw, 220px);
   height: auto;
   display: block;
-}
-
-.header-cta {
-  background: #d7ff7b;
-  color: #15182d;
-  padding: 0.65rem 1rem;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 700;
 }
 
 .hero {
@@ -116,10 +101,10 @@ h1 {
   margin-top: 1rem;
 }
 
-.hero-tagline-logo {
-  width: clamp(240px, 40vw, 460px);
+.hero-main-logo {
+  width: clamp(220px, 34vw, 420px);
   height: auto;
-  margin: 1rem auto 0.2rem;
+  margin: 0 auto 0.9rem;
   display: block;
 }
 
