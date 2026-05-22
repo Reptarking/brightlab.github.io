@@ -24,7 +24,7 @@ body {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Roboto', 'Inter', sans-serif;
   background: linear-gradient(-45deg, var(--bg-1), var(--bg-2), var(--bg-3), var(--bg-2));
   background-size: 400% 400%;
   animation: gradientBG 25s ease infinite;
@@ -39,15 +39,49 @@ body {
 }
 
 main,
+.site-header,
 .hero,
 .footer {
   width: min(1120px, 92%);
   margin-inline: auto;
 }
 
+
+.site-header {
+  padding: 1.1rem 0 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.7rem;
+  border-radius: 10px;
+  background: rgba(21, 24, 45, 0.45);
+}
+
+.brand-lockup img, .footer-logo, .hero-isotype {
+  height: auto;
+  display: block;
+}
+
+.header-cta {
+  background: #d7ff7b;
+  color: #15182d;
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
 .hero {
   padding: 5.5rem 0 2rem;
   text-align: center;
+  display: grid;
+  justify-items: center;
 }
 
 .eyebrow {
@@ -119,7 +153,7 @@ h1 {
 .stats article {
   background: var(--card);
   border: 1px solid var(--card-border);
-  border-radius: 14px;
+  border-radius: 20px;
   box-shadow: var(--shadow);
   padding: 1rem;
   text-align: left;
@@ -167,7 +201,7 @@ h1 {
   border: 1px solid var(--card-border);
   background: rgba(21, 24, 45, 0.75);
   color: var(--text);
-  border-radius: 12px;
+  border-radius: 10px;
   padding: 0.75rem;
   text-align: left;
   cursor: pointer;
@@ -196,7 +230,7 @@ h1 {
   display: none;
   background: var(--card);
   border: 1px solid var(--card-border);
-  border-radius: 18px;
+  border-radius: 20px;
   box-shadow: var(--shadow);
   padding: 1.5rem;
   animation: fadePanel 0.3s ease;
@@ -324,7 +358,7 @@ a {
 .modal-card {
   background: #1b2142;
   width: min(440px, 100%);
-  border-radius: 14px;
+  border-radius: 20px;
   border: 1px solid rgba(215, 255, 123, 0.25);
   padding: 1.4rem;
   position: relative;
@@ -410,7 +444,7 @@ a {
 .booking-card {
   background: var(--card);
   border: 1px solid var(--card-border);
-  border-radius: 18px;
+  border-radius: 20px;
   box-shadow: var(--shadow);
   padding: 1.5rem;
   text-align: center;
@@ -426,4 +460,10 @@ a {
   gap: 0.8rem;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.footer-logo { margin: 0 auto 0.9rem; }
+
+@media (max-width: 640px) {
+  .site-header { flex-direction: column; }
 }
