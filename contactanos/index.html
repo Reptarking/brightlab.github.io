@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Brightlab | Agenda una reunión</title>
   <meta name="description" content="Agenda una reunión con Brightlab usando nuestra página de reservas." />
-  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="../brightlab_repo_upload_ready/public/assets/brand/isotype-favicon.png" type="image/png" />
   <style>
     :root {
       color-scheme: dark;
@@ -45,6 +45,7 @@
       display: flex;
       gap: 0.6rem;
       flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
     .btn {
@@ -67,11 +68,25 @@
       border: 0;
       background: white;
     }
+
+    @media (max-width: 640px) {
+      .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .actions {
+        width: 100%;
+        justify-content: flex-start;
+      }
+    }
   </style>
 </head>
 <body>
   <header class="topbar">
-    <h1>Agenda una reunión con Brightlab</h1>
+    <h1>
+      <img src="../brightlab_repo_upload_ready/public/assets/brand/logo-transparent.png" alt="Brightlab logo" style="width: 145px; height: auto; vertical-align: middle;" />
+    </h1>
     <div class="actions">
       <a class="btn btn-home" href="/">Volver al inicio</a>
     </div>
