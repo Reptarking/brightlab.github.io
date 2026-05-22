@@ -27,24 +27,15 @@
 
   <canvas class="particles" aria-hidden="true"></canvas>
 
-
-  <header class="site-header fade-in-up">
-    <a class="brand-lockup" href="/" aria-label="Brightlab inicio">
-      <img src="brightlab_repo_upload_ready/public/assets/brand/logo-transparent.png" alt="Brightlab" width="220" height="68" />
-    </a>
-    <a class="header-cta" href="/contactanos/" target="_blank" rel="noopener noreferrer">Agenda una reunión</a>
-  </header>
-
   <header class="hero fade-in-up" id="mainHero">
-    <img class="hero-isotype" src="brightlab_repo_upload_ready/public/assets/brand/isotype-primary.png" alt="Isotipo Brightlab" width="82" height="82" />
+    <img class="hero-main-logo" src="brightlab_repo_upload_ready/public/assets/brand/logo-transparent.png" alt="Brightlab" />
     <span class="eyebrow">Agencia digital integral</span>
     <h1>Bright solutions for smart decisions</h1>
-    <p class="hero-subtitle">Convertimos ideas en resultados medibles combinando estrategia, creatividad y tecnología.</p>
-    <img class="hero-tagline-logo" src="brightlab_repo_upload_ready/public/assets/brand/logo-transparent.png" alt="Bright solutions for smart decisions - Brightlab" />
+    <p class="hero-subtitle">Convertimos ideas en resultados medibles combinando marketing, investigación, tecnología y diseño.</p>
     <p class="hero-slogan">Datos. Diseño. Impacto real.</p>
     <div class="hero-cta">
-      <a class="btn-primary" href="#servicios">Ver servicios</a>
-      <a class="btn-secondary" href="/contactanos/" aria-label="Abrir agenda de reunión" target="_blank" rel="noopener noreferrer">Conversemos</a>
+      <a class="btn-primary" href="/contactanos/" aria-label="Abrir agenda de reunión" target="_blank" rel="noopener noreferrer">Agenda una reunión</a>
+      <a class="btn-secondary" href="#servicios">Ver servicios</a>
     </div>
   </header>
 
@@ -62,19 +53,20 @@
         <p>Selecciona una pestaña para ver alcance, entregables y resultados esperados de cada línea de servicio.</p>
       </div>
 
-      <div class="tabs" role="tablist" aria-label="Pestañas de servicios Brightlab">
-        <button role="tab" aria-selected="true" aria-controls="tab-growth" id="btn-growth" class="tab-btn active" data-tab="growth"><i class="fa-solid fa-rocket"></i> Growth & Ads</button>
-        <button role="tab" aria-selected="false" aria-controls="tab-bi" id="btn-bi" class="tab-btn" data-tab="bi"><i class="fa-solid fa-chart-line"></i> Business Intelligence</button>
-        <button role="tab" aria-selected="false" aria-controls="tab-ux" id="btn-ux" class="tab-btn" data-tab="ux"><i class="fa-solid fa-palette"></i> UX, CX y Diseño</button>
-        <button role="tab" aria-selected="false" aria-controls="tab-research" id="btn-research" class="tab-btn" data-tab="research"><i class="fa-solid fa-flask"></i> Market Research</button>
-        <button role="tab" aria-selected="false" aria-controls="tab-pr" id="btn-pr" class="tab-btn" data-tab="pr"><i class="fa-solid fa-newspaper"></i> Relaciones Públicas</button>
-        <button role="tab" aria-selected="false" aria-controls="tab-ai" id="btn-ai" class="tab-btn" data-tab="ai"><i class="fa-solid fa-robot"></i> IA & APIs</button>
-        <button role="tab" aria-selected="false" aria-controls="tab-crm" id="btn-crm" class="tab-btn" data-tab="crm"><i class="fa-solid fa-gears"></i> Automatización & CRM</button>
-        <button role="tab" aria-selected="false" aria-controls="tab-dev" id="btn-dev" class="tab-btn" data-tab="dev"><i class="fa-solid fa-code"></i> Desarrollo Web & Apps</button>
-        <button role="tab" aria-selected="false" aria-controls="tab-content" id="btn-content" class="tab-btn" data-tab="content"><i class="fa-solid fa-pen-nib"></i> Contenido & SEO</button>
-      </div>
+      <div class="services-layout">
+        <div class="tabs" role="tablist" aria-label="Pestañas de servicios Brightlab">
+          <button role="tab" aria-selected="true" aria-controls="tab-growth" id="btn-growth" class="tab-btn active" data-tab="growth"><i class="fa-solid fa-rocket"></i> <span>Growth & Ads</span></button>
+          <button role="tab" aria-selected="false" aria-controls="tab-bi" id="btn-bi" class="tab-btn" data-tab="bi"><i class="fa-solid fa-chart-line"></i> <span>Business Intelligence</span></button>
+          <button role="tab" aria-selected="false" aria-controls="tab-ux" id="btn-ux" class="tab-btn" data-tab="ux"><i class="fa-solid fa-palette"></i> <span>UX, CX y Diseño</span></button>
+          <button role="tab" aria-selected="false" aria-controls="tab-research" id="btn-research" class="tab-btn" data-tab="research"><i class="fa-solid fa-flask"></i> <span>Market Research</span></button>
+          <button role="tab" aria-selected="false" aria-controls="tab-pr" id="btn-pr" class="tab-btn" data-tab="pr"><i class="fa-solid fa-newspaper"></i> <span>Relaciones Públicas</span></button>
+          <button role="tab" aria-selected="false" aria-controls="tab-ai" id="btn-ai" class="tab-btn" data-tab="ai"><i class="fa-solid fa-robot"></i> <span>IA & APIs</span></button>
+          <button role="tab" aria-selected="false" aria-controls="tab-crm" id="btn-crm" class="tab-btn" data-tab="crm"><i class="fa-solid fa-gears"></i> <span>Automatización & CRM</span></button>
+          <button role="tab" aria-selected="false" aria-controls="tab-dev" id="btn-dev" class="tab-btn" data-tab="dev"><i class="fa-solid fa-code"></i> <span>Desarrollo Web & Apps</span></button>
+          <button role="tab" aria-selected="false" aria-controls="tab-content" id="btn-content" class="tab-btn" data-tab="content"><i class="fa-solid fa-pen-nib"></i> <span>Contenido & SEO</span></button>
+        </div>
 
-      <div class="tab-panels">
+        <div class="tab-panels">
         <article class="tab-panel active" role="tabpanel" id="tab-growth" aria-labelledby="btn-growth">
           <h3>Growth Marketing & Ads Digitales</h3>
           <p>Diseñamos embudos completos (awareness, consideración y conversión) con campañas en Google, Meta, TikTok y LinkedIn, alineadas al LTV y CAC objetivo.</p>
@@ -173,6 +165,7 @@
           </ul>
           <p class="panel-result"><strong>Resultado esperado:</strong> mayor tráfico orgánico, autoridad de marca y generación de demanda sostenida.</p>
         </article>
+        </div>
       </div>
     </section>
 
