@@ -69,6 +69,8 @@ main,
 .hero {
   padding: 2.5rem 0 2rem;
   text-align: center;
+  display: grid;
+  justify-items: center;
 }
 
 .eyebrow {
@@ -370,7 +372,7 @@ a {
 .modal-card {
   background: #1b2142;
   width: min(440px, 100%);
-  border-radius: 14px;
+  border-radius: 20px;
   border: 1px solid rgba(215, 255, 123, 0.25);
   padding: 1.4rem;
   position: relative;
@@ -462,7 +464,7 @@ a {
 .booking-card {
   background: var(--card);
   border: 1px solid var(--card-border);
-  border-radius: 18px;
+  border-radius: 20px;
   box-shadow: var(--shadow);
   padding: 1.5rem;
   text-align: center;
@@ -478,4 +480,10 @@ a {
   gap: 0.8rem;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.footer-logo { margin: 0 auto 0.9rem; }
+
+@media (max-width: 640px) {
+  .site-header { flex-direction: column; }
 }
