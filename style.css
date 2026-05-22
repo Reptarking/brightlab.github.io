@@ -32,6 +32,10 @@ body {
   overflow-x: hidden;
 }
 
+h1, h2, h3, .eyebrow {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+}
+
 @keyframes gradientBG {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -78,7 +82,7 @@ main,
 }
 
 .hero {
-  padding: 5.5rem 0 2rem;
+  padding: 2.5rem 0 2rem;
   text-align: center;
   display: grid;
   justify-items: center;
@@ -109,7 +113,14 @@ h1 {
 .hero-slogan {
   color: var(--muted);
   font-style: italic;
-  margin-top: 0.8rem;
+  margin-top: 1rem;
+}
+
+.hero-tagline-logo {
+  width: clamp(240px, 40vw, 460px);
+  height: auto;
+  margin: 1rem auto 0.2rem;
+  display: block;
 }
 
 .hero-cta {
@@ -274,6 +285,24 @@ h1 {
   padding: 0 0 2.8rem;
 }
 
+.footer-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.9rem;
+}
+
+.footer-isotype {
+  width: 42px;
+  height: 42px;
+}
+
+.footer-logo {
+  width: clamp(130px, 16vw, 200px);
+  height: auto;
+}
+
 .footer p {
   color: var(--muted);
 }
@@ -432,8 +461,14 @@ a {
 }
 
 @media (max-width: 640px) {
+  .site-header {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+  }
+
   .hero {
-    padding-top: 4.8rem;
+    padding-top: 2rem;
   }
 
   .tab-btn {
