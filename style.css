@@ -24,12 +24,16 @@ body {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Roboto', 'Inter', sans-serif;
   background: linear-gradient(-45deg, var(--bg-1), var(--bg-2), var(--bg-3), var(--bg-2));
   background-size: 400% 400%;
   animation: gradientBG 25s ease infinite;
   color: var(--text);
   overflow-x: hidden;
+}
+
+h1, h2, h3, .eyebrow {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
 }
 
 @keyframes gradientBG {
@@ -39,14 +43,31 @@ body {
 }
 
 main,
+.site-header,
 .hero,
 .footer {
   width: min(1120px, 92%);
   margin-inline: auto;
 }
 
+.site-header {
+  padding-top: 1.4rem;
+}
+
+.brand-link {
+  display: inline-flex;
+  border-radius: 12px;
+  padding: 0.4rem 0.6rem;
+}
+
+.brand-logo {
+  width: clamp(130px, 18vw, 220px);
+  height: auto;
+  display: block;
+}
+
 .hero {
-  padding: 5.5rem 0 2rem;
+  padding: 2.5rem 0 2rem;
   text-align: center;
 }
 
@@ -75,7 +96,14 @@ h1 {
 .hero-slogan {
   color: var(--muted);
   font-style: italic;
-  margin-top: 0.8rem;
+  margin-top: 1rem;
+}
+
+.hero-main-logo {
+  width: clamp(220px, 34vw, 420px);
+  height: auto;
+  margin: 0 auto 0.9rem;
+  display: block;
 }
 
 .hero-cta {
@@ -119,7 +147,7 @@ h1 {
 .stats article {
   background: var(--card);
   border: 1px solid var(--card-border);
-  border-radius: 14px;
+  border-radius: 20px;
   box-shadow: var(--shadow);
   padding: 1rem;
   text-align: left;
@@ -167,7 +195,7 @@ h1 {
   border: 1px solid var(--card-border);
   background: rgba(21, 24, 45, 0.75);
   color: var(--text);
-  border-radius: 12px;
+  border-radius: 10px;
   padding: 0.75rem;
   text-align: left;
   cursor: pointer;
@@ -196,7 +224,7 @@ h1 {
   display: none;
   background: var(--card);
   border: 1px solid var(--card-border);
-  border-radius: 18px;
+  border-radius: 20px;
   box-shadow: var(--shadow);
   padding: 1.5rem;
   animation: fadePanel 0.3s ease;
@@ -238,6 +266,24 @@ h1 {
 .footer {
   text-align: center;
   padding: 0 0 2.8rem;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.9rem;
+}
+
+.footer-isotype {
+  width: 42px;
+  height: 42px;
+}
+
+.footer-logo {
+  width: clamp(130px, 16vw, 200px);
+  height: auto;
 }
 
 .footer p {
@@ -398,8 +444,14 @@ a {
 }
 
 @media (max-width: 640px) {
+  .site-header {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+  }
+
   .hero {
-    padding-top: 4.8rem;
+    padding-top: 2rem;
   }
 
   .tab-btn {
